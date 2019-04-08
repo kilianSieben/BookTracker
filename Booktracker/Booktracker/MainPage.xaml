@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Booktracker"
+             x:Class="Booktracker.MainPage">
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="100"/>
+                <RowDefinition Height="100"/>
+                <RowDefinition Height="100"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="300"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+
+            <Button Text="Neuer Eintrag" 
+                Grid.Row="1" 
+                Grid.Column="1" 
+                BackgroundColor="Wheat"
+                Clicked="OnNeuerEintragClicked"/>
+            <Button Text="Übersicht" 
+                Grid.Row="2"
+                Grid.Column="1"  
+                BackgroundColor="Wheat"
+                Clicked="OnÜbersichtClicked"/>
+            <Button Text="Auswertung" 
+                Grid.Row="3"
+                Grid.Column="1"   
+                BackgroundColor="Wheat"
+                Clicked="OnAuswertungClicked"/>
+
+
+
+        </Grid>
+  
+</ContentPage>

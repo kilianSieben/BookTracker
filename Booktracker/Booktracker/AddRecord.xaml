@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Booktracker.AddRecord"
+             Title="Hinzfügen">
+    <ContentPage.Content>
+        <StackLayout>
+            <Entry Placeholder="Titel" x:Name="titleEntry"/>
+            <Entry Placeholder="Autor/in" x:Name="autorEntry"/>
+            <Entry Keyboard ="Numeric" Placeholder="Seitenanzahl" x:Name="pageEntry"/>
+            <Picker x:Name="genrePicker" Title="Genre">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>Krimi</x:String>
+                        <x:String>Thriller</x:String>
+                        <x:String>Liebesroman</x:String>
+                        <x:String>Reiseroman</x:String>
+                        <x:String>Science Fiction</x:String>
+                        <x:String>Fantasy</x:String>
+                        <x:String>Horror</x:String>
+                        <x:String>Historischer Roman</x:String>
+                        <x:String>Gesellschaftsroman</x:String>
+                        <x:String>Familienroman</x:String>
+                        <x:String>Reiseroman</x:String>
+                        <x:String>Sachbuch</x:String>
+                        <x:String>Fachbuch</x:String>
+                        <x:String>Ratgeber</x:String>
+                        <x:String>Biografie</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+            <Label Text="Start Datum:"/>
+            <DatePicker x:Name="startDate" Format="D"/>
+            
+            <Label Text="End Datum:"/>
+            <DatePicker x:Name="endDate" Format="D"/>
+
+            <Button Text="Save" Clicked="OnSaveButtonClicked"/>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

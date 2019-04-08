@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Booktracker.AllBooks">
+
+
+    <ContentPage.Content>
+        <StackLayout>
+            <ListView x:Name="listView2"
+                      SelectionMode="Single"
+                      Margin="20"
+                      ItemTapped="OnBookTapped">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <TextCell Text="{Binding title}"
+                                  Detail="{Binding genre}"
+                                  />
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+
+            </ListView>
+
+            <Picker x:Name="filterPicker" Title="Filter" BackgroundColor="Wheat" SelectedIndexChanged="OnSelectedPickerItemChanged"/>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
